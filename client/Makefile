@@ -12,3 +12,9 @@ lint:
 
 lint-fix:
 	npx eslint --fix
+
+lint-css:
+	npx stylelint src
+
+lint-css-fix:
+	make lint-css -- --fix
