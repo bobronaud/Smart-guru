@@ -1,0 +1,3 @@
+cd client
+make lint
+make lint-css
