@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+//коммент
 const App = () => {
 	const [count, setCount] = useState(0);
 	const handleclick = () => {
