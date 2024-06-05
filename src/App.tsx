@@ -7,8 +7,8 @@ const App = () => {
 	};
 	return (
 		<div>
-			<h1>{count}</h1>
-			<button onClick={handleclick}>plus</button>
+			<h1>Smart-guru describers {count}</h1>
+			<button onClick={handleclick}>Describe</button>
 		</div>
 	);
 };
