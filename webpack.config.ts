@@ -18,6 +18,16 @@ export default (env: EnvVariables) => {
 	const devServer: DevServerConfiguration = {
 		port: env.port ?? 3000,
 		open: true,
+		hot: true,
+	};
+
+	const cssLoaderWithModules = {
+		loader: 'css-loader',
+		options: {
+			modules: {
+				localIdentName: isDev ? '[path][name]__[local]' : '[hash:base64:8]',
+			},
+		},
 	};
 
 	const config: Configuration = {
@@ -46,8 +56,8 @@ export default (env: EnvVariables) => {
 					exclude: /node_modules/,
 				},
 				{
-					test: /\.s?css$/,
-					use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+					test: /\.(c|sa|sc)ss$/,
+					use: [isDev ? 'style-loader' : MiniCssExtractPlugin.loader, cssLoaderWithModules, 'sass-loader'],
 				},
 			],
 		},
