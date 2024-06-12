@@ -1,9 +1,9 @@
-import path from 'path';
-import type { Configuration as DevServerConfiguration } from 'webpack-dev-server';
-import type { Configuration } from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import path from 'path';
+import type { Configuration } from 'webpack';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+import type { Configuration as DevServerConfiguration } from 'webpack-dev-server';
 
 type Mode = 'production' | 'development';
 
@@ -47,7 +47,9 @@ export default (env: EnvVariables) => {
 				filename: 'css/[name].[contenthash].css',
 				chunkFilename: 'css/[name].[contenthash].css',
 			}),
-			new BundleAnalyzerPlugin(),
+			new BundleAnalyzerPlugin({
+				openAnalyzer: false,
+			}),
 		],
 		module: {
 			rules: [
