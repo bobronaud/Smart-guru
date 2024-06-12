@@ -41,8 +41,13 @@ $font-weight-sm-tablet: 700;
 $line-height-sm-tablet: 15.6px;
 
 .btn {
+	cursor: pointer;
 	display: inline-block;
 	border-radius: 5px;
+
+	&.disabled {
+		cursor: default;
+	}
 }
 
 svg {
