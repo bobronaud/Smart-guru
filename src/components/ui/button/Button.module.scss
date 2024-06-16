@@ -45,7 +45,7 @@ $line-height-sm-tablet: 15.6px;
 	display: inline-block;
 	border-radius: 5px;
 
-	&.disabled {
+	&:disabled {
 		cursor: default;
 	}
 }
@@ -76,7 +76,7 @@ svg {
 		stroke: $primary-text-color-hover;
 	}
 
-	&.disabled {
+	&:disabled {
 		color: $primary-text-color-disabled;
 		background-color: $primary-bg-color-disabled;
 		border: none;
@@ -97,7 +97,7 @@ svg {
 		stroke: $secondary-text-color-hover;
 	}
 
-	&.disabled {
+	&:disabled {
 		color: $secondary-text-color-disabled;
 		background-color: $secondary-bg-color-disabled;
 		border: 1px solid $secondary-border-color-disabled;
@@ -118,7 +118,7 @@ svg {
 		stroke: $outlined-text-color-hover;
 	}
 
-	&.disabled {
+	&:disabled {
 		color: $outlined-text-color-disabled;
 		background-color: $outlined-bg-color-disabled;
 		border: 1px solid $outlined-border-color-disabled;
