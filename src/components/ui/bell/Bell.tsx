@@ -4,12 +4,20 @@ import { useState } from 'react';
 const Bell: React.FC = () => {
 	const [dot, setDot] = useState(true);
 	const handleclick2 = () => {
+		console.log(dot);
 		setDot(!dot);
+	};
+	const [newNotifications, setNewNotifications] = useState(false);
+	const handkeclick3 = () => {
+		setNewNotifications(!newNotifications);
 	};
 	return (
 		<button
-			className={classes.bellBtn}
-			onClick={handleclick2}
+			className={`${classes.bellBtn} ${newNotifications && classes.active}`}
+			onClick={() => {
+				handleclick2();
+				handkeclick3();
+			}}
 		>
 			<svg
 				width='24'
@@ -37,7 +45,7 @@ const Bell: React.FC = () => {
 					strokeLinejoin='round'
 				/>
 			</svg>
-			{!dot && <span className={classes.dot}></span>}
+			{dot && <span className={classes.dot}></span>}
 		</button>
 	);
 };

@@ -4,6 +4,7 @@ $border-color: #ededed;
 
 .bellBtn {
 	position: relative;
+	
 	background-color: $white-back;
 	border: 1px solid $border-color;
 	border-radius: 5px;
@@ -17,7 +18,11 @@ $border-color: #ededed;
 		background-color: #f6f6f6;
 	}
 
-	&:active {
+	&:focus {
+		outline: none;
+	}
+
+	&.active {
 		background-color: $orange-back;
 		border: 1px solid $orange-back;
 
