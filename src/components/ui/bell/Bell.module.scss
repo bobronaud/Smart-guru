@@ -1,0 +1,54 @@
+$white-back: #fff;
+$orange-back: #f7a121;
+$border-color: #ededed;
+
+.bellBtn {
+	position: relative;
+	
+	background-color: $white-back;
+	border: 1px solid $border-color;
+	border-radius: 5px;
+	
+	width: 54px;
+	height: 54px;
+	padding: 15px;
+
+	&:hover {
+		cursor: pointer;
+		background-color: #f6f6f6;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&.active {
+		background-color: $orange-back;
+		border: 1px solid $orange-back;
+
+		svg {
+			path {
+				fill: $white-back;
+				stroke: $white-back;
+
+				&:first-of-type {
+					stroke: none;
+				}
+			}
+		}
+	}
+	
+	.dot {
+		position: absolute;
+		top: 4px;
+		right: 4px;
+
+		display: inline-block;
+
+		width: 8px;
+		height: 8px;
+
+		background-color: #f7a121;
+		border-radius: 50%;
+	}
+}
