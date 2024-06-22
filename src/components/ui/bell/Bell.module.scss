@@ -4,11 +4,11 @@ $border-color: #ededed;
 
 .bellBtn {
 	position: relative;
-	
+
 	background-color: $white-back;
 	border: 1px solid $border-color;
 	border-radius: 5px;
-	
+
 	width: 54px;
 	height: 54px;
 	padding: 15px;
@@ -37,7 +37,7 @@ $border-color: #ededed;
 			}
 		}
 	}
-	
+
 	.dot {
 		position: absolute;
 		top: 4px;

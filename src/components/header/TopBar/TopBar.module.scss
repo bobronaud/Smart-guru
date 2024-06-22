@@ -1,0 +1,124 @@
+$button-size: 54px;
+$casual-border: 1px solid #ededed;
+$background-basic: #fff;
+$basic-height: 56px;
+
+.topBar {
+	width: 100%;
+	height: 76px;
+	border-bottom: $casual-border;
+	padding: 10px 26px 10px 30px;
+	display: flex;
+	justify-content: flex-end;
+
+	.box {
+		display: flex;
+		gap: 20px;
+		height: 56px;
+
+		.btnBox {
+			display: flex;
+			gap: 15px;
+			justify-content: space-between;
+			width: 123px;
+			height: $basic-height;
+
+			.favBtn {
+				width: $button-size;
+				height: $button-size;
+				border: $casual-border;
+				background-color: $background-basic;
+				border-radius: 5px;
+				padding: 15px;
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+
+		.profBox {
+			display: flex;
+			gap: 15px;
+			align-items: center;
+			height: $basic-height;
+
+			.nameBox {
+				display: flex;
+				height: 47px;
+				flex-direction: column;
+				justify-content: center;
+				align-items: flex-end;
+
+				.user {
+					font-size: 16px;
+					font-weight: 400;
+				}
+
+				.userName {
+					font-size: 20px;
+					font-weight: 600;
+					white-space: nowrap;
+				}
+			}
+
+			.photoBox {
+				height: $basic-height;
+				width: $basic-height;
+
+				.photo {
+					height: $basic-height;
+					width: $basic-height;
+					border-radius: 50px;
+				}
+			}
+		}
+	}
+}
+
+@media (width <= 1000px) {
+	.topBar {
+		justify-content: space-between;
+		align-items: flex-start;
+		padding: 0 0 10px;
+		height: 74px;
+
+		.bigLogo {
+			width: 197px;
+			height: 64px;
+		}
+
+		.box {
+			.profBox {
+				.photoBox {
+					height: 50px;
+					width: 50px;
+
+					.photo {
+						height: 50px;
+						width: 50px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (width <= 360px) {
+	.topBar {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		padding: 0 0 15px;
+		height: 69px;
+
+		.smallLogo {
+			width: 66px;
+			height: 48px;
+		}
+
+		.box {
+			height: 54px;
+		}
+	}
+}
