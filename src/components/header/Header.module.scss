@@ -5,12 +5,12 @@ $basic-height: 56px;
 $default-width: 100%;
 
 .mainContainer {
-	background-color: $background-basic;
 	max-width: inherit;
+	background-color: $background-basic;
 
 	.preCont {
-		padding: 30px 26px 0 32px;
 		display: flex;
+		padding: 30px 26px 0 32px;
 		flex-direction: column;
 		gap: 30px;
 
@@ -18,9 +18,9 @@ $default-width: 100%;
 			height: 40px;
 
 			.caption {
-				line-height: 39.6px;
 				font-weight: 800;
 				font-size: 36px;
+				line-height: 39.6px;
 			}
 		}
 
@@ -45,8 +45,8 @@ $default-width: 100%;
 		padding: 20px;
 
 		.preCont {
-			padding: 0;
 			gap: 20px;
+			padding: 0;
 
 			.captionBox {
 				.caption {
@@ -73,8 +73,8 @@ $default-width: 100%;
 		padding: 20px;
 
 		.preCont {
-			padding: 0;
 			gap: 20px;
+			padding: 0;
 
 			.captionBox {
 				.caption {

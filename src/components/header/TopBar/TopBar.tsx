@@ -7,18 +7,19 @@ import SmallLogoSVG from '@/assets/icons/smalllogo.svg';
 
 const TopBar = () => {
 	const dispWidth = useWindowWidth();
-	const bigWidth = dispWidth > 1000;
-	const smallWidth = dispWidth <= 360;
+	const bigWidth = dispWidth <= 1000 && dispWidth > 600;
+	const smallWidth = dispWidth <= 600;
 
 	return (
 		<section className={classes.topBar}>
-			{bigWidth ? null : smallWidth ? (
-				<div>
-					<SmallLogoSVG className={classes.smallLogo} />
-				</div>
-			) : (
+			{bigWidth && (
 				<div>
 					<BigLogoSVG className={classes.bigLogo} />
+				</div>
+			)}
+			{smallWidth && (
+				<div>
+					<SmallLogoSVG className={classes.smallLogo} />
 				</div>
 			)}
 			<div className={classes.box}>
