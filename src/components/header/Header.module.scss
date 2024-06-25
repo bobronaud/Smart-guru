@@ -65,7 +65,7 @@ $default-width: 100%;
 	}
 }
 
-@media (width <= 360px) {
+@media (width <= 600px) {
 	.mainContainer {
 		display: flex;
 		flex-direction: column;
