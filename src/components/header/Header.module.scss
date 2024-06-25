@@ -10,16 +10,16 @@ $default-width: 100%;
 
 	.preCont {
 		display: flex;
-		padding: 30px 26px 0 32px;
 		flex-direction: column;
 		gap: 30px;
+		padding: 30px 26px 0 32px;
 
 		.captionBox {
 			height: 40px;
 
 			.caption {
-				font-weight: 800;
 				font-size: 36px;
+				font-weight: 800;
 				line-height: 39.6px;
 			}
 		}
@@ -65,7 +65,7 @@ $default-width: 100%;
 	}
 }
 
-@media (width <= 360px) {
+@media (width <= 600px) {
 	.mainContainer {
 		display: flex;
 		flex-direction: column;

@@ -12,16 +12,8 @@ const TopBar = () => {
 
 	return (
 		<section className={classes.topBar}>
-			{bigWidth && (
-				<div>
-					<BigLogoSVG className={classes.bigLogo} />
-				</div>
-			)}
-			{smallWidth && (
-				<div>
-					<SmallLogoSVG className={classes.smallLogo} />
-				</div>
-			)}
+			{bigWidth && <BigLogoSVG className={classes.bigLogo} />}
+			{smallWidth && <SmallLogoSVG className={classes.smallLogo} />}
 			<div className={classes.box}>
 				<div className={classes.btnBox}>
 					<button className={classes.favBtn}>
