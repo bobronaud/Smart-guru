@@ -3,7 +3,7 @@ import styles from './MyCertificates.module.scss';
 
 const cx = classNames.bind(styles);
 
-import image1 from './1af.jpeg';
+import image1 from './1.jpeg';
 import image2 from './2.jpeg';
 const MyCertificates = () => {
 	return (
