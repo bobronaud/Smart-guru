@@ -24,6 +24,8 @@ $outlined-text-color-disabled: #9ea5ad;
 $outlined-bg-color-disabled: #fff;
 $outlined-border-color-disabled: #9ea5ad;
 
+$transition-base: 0.2s;
+
 $font-size-lg-desktop: 18px;
 $font-weight-lg-desktop: 600;
 $line-height-lg-desktop: 23.4px;
@@ -41,8 +43,8 @@ $font-weight-sm-tablet: 700;
 $line-height-sm-tablet: 15.6px;
 
 // Breakpoints
-$breakpoint-lg-down: 1441px;
-$breakpoint-md-down: 1033px;
+$breakpoint-lg-down: 1440px;
+$breakpoint-md-down: 1023px;
 $breakpoint-sm-down: 767px;
 $breakpoint-xs-down: 413px;
 
