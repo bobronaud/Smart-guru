@@ -4,7 +4,7 @@ import Button from './components/ui/button/Button';
 const App = () => {
 	const [count, setCount] = useState(0);
 	const handleclick = () => {
-		setCount(prev => prev + 1);
+		setCount((prev) => prev + 1);
 	};
 	return (
 		<div>
