@@ -1,4 +1,44 @@
-@import '../../../assets/styles/variables';
+$primary-text-color: #fff;
+$primary-bg-color: #f7a121;
+$primary-text-color-hover: #f7a121;
+$primary-bg-color-hover: #fff;
+$primary-border-color-hover: #f7a121;
+$primary-text-color-disabled: #9ea5ad;
+$primary-bg-color-disabled: #ededed;
+
+$secondary-text-color: #fff;
+$secondary-bg-color: #292929;
+$secondary-text-color-hover: #292929;
+$secondary-bg-color-hover: #fff;
+$secondary-border-color-hover: #292929;
+$secondary-text-color-disabled: #9ea5ad;
+$secondary-bg-color-disabled: #ededed;
+$secondary-border-color-disabled: #9ea5ad;
+
+$outlined-text-color: #292929;
+$outlined-bg-color: #fff;
+$outlined-text-color-hover: #292929;
+$outlined-bg-color-hover: #f7a121;
+$outlined-border-color-hover: #292929;
+$outlined-text-color-disabled: #9ea5ad;
+$outlined-bg-color-disabled: #fff;
+$outlined-border-color-disabled: #9ea5ad;
+
+$font-size-lg-desktop: 18px;
+$font-weight-lg-desktop: 600;
+$line-height-lg-desktop: 23.4px;
+
+$font-size-sm-desktop: 14px;
+$font-weight-sm-desktop: 700;
+$line-height-sm-desktop: 18.2px;
+
+$font-size-lg-tablet: 16px;
+$font-weight-lg-tablet: 500;
+$line-height-lg-tablet: 20.8px;
+
+$font-size-sm-tablet: 12px;
+$font-weight-sm-tablet: 700;
+$line-height-sm-tablet: 15.6px;
 
 .btn {
 	cursor: pointer;
