@@ -1,7 +1,7 @@
-import App from './App';
 import { Route, Routes } from 'react-router-dom';
-import UiKit from './components/pages/uiKit/UiKit';
-import MyCertificates from './components/pages/myCertificates/MyCertificates';
+import App from './App';
+import MyCertificates from './pages/myCertificates/MyCertificates';
+import UiKit from './pages/uiKit/UiKit';
 import routes from './routes';
 
 const AppRoutes = () => {
