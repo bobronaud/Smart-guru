@@ -3,12 +3,15 @@ import styles from './MyCertificates.module.scss';
 
 const cx = classNames.bind(styles);
 
+import SidebarComments from '@/components/sidebarComments/SidebarComments';
 import image1 from './1.jpeg';
 import image2 from './2.jpeg';
 const MyCertificates = () => {
 	return (
 		<section className={cx('certificates')}>
 			<div className={cx('container')}>
+				<SidebarComments />
+
 				<h1 className={cx('title')}>Мои сертификаты</h1>
 				<ul className={cx('list')}>
 					<li className={cx('item')}>
