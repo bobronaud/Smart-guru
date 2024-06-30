@@ -24,65 +24,65 @@ svg {
 }
 
 .primary {
-	color: $primary-text-color;
-	background-color: $primary-bg-color;
+	color: $color-white;
+	background-color: $color-orange;
 	border: none;
-	stroke: $primary-text-color;
+	stroke: $color-white;
 
 	&:hover {
-		color: $primary-text-color-hover;
-		background-color: $primary-bg-color-hover;
-		border: 1px solid $primary-border-color-hover;
-		stroke: $primary-text-color-hover;
+		color: $color-orange;
+		background-color: $color-white;
+		border: 1px solid $color-orange;
+		stroke: $color-orange;
 	}
 
 	&:disabled {
-		color: $primary-text-color-disabled;
-		background-color: $primary-bg-color-disabled;
+		color: $color-gray;
+		background-color: $color-gray-lite;
 		border: none;
-		stroke: $primary-text-color-disabled;
+		stroke: $color-gray;
 	}
 }
 
 .secondary {
-	color: $secondary-text-color;
-	background-color: $secondary-bg-color;
+	color: $color-white;
+	background-color: $color-black;
 	border: none;
-	stroke: $secondary-text-color;
+	stroke: $color-white;
 
 	&:hover {
-		color: $secondary-text-color-hover;
-		background-color: $secondary-bg-color-hover;
-		border: 1px solid $secondary-border-color-hover;
-		stroke: $secondary-text-color-hover;
+		color: $color-black;
+		background-color: $color-white;
+		border: 1px solid $color-black;
+		stroke: $color-black;
 	}
 
 	&:disabled {
-		color: $secondary-text-color-disabled;
-		background-color: $secondary-bg-color-disabled;
-		border: 1px solid $secondary-border-color-disabled;
-		stroke: $secondary-text-color-disabled;
+		color: $color-gray;
+		background-color: $color-gray-lite;
+		border: 1px solid $color-gray;
+		stroke: $color-gray;
 	}
 }
 
 .outlined {
-	color: $outlined-text-color;
-	background-color: $outlined-bg-color;
+	color: $color-black;
+	background-color: $color-white;
 	border: 1px solid #9ea5ad;
-	stroke: $outlined-text-color;
+	stroke: $color-black;
 
 	&:hover {
-		color: $outlined-text-color-hover;
-		background-color: $outlined-bg-color-hover;
-		border: 1px solid $outlined-border-color-hover;
-		stroke: $outlined-text-color-hover;
+		color: $color-black;
+		background-color: $color-orange;
+		border: 1px solid $color-black;
+		stroke: $color-black;
 	}
 
 	&:disabled {
-		color: $outlined-text-color-disabled;
-		background-color: $outlined-bg-color-disabled;
-		border: 1px solid $outlined-border-color-disabled;
-		stroke: $outlined-text-color-disabled;
+		color: $color-gray;
+		background-color: $color-white;
+		border: 1px solid $color-gray;
+		stroke: $color-gray;
 	}
 }
 
