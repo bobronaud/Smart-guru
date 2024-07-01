@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import Button from './components/ui/button/Button';
-import { FiltersMenu } from './components/filters/FiltersMenu';
 
 const App = () => {
 	const [count, setCount] = useState(0);
@@ -11,7 +10,6 @@ const App = () => {
 		<div>
 			<h1>Smart-guru describers: {count}</h1>
 			<Button onClick={handleclick}>Describe</Button>
-			<FiltersMenu></FiltersMenu>
 			<Button onClick={handleclick}>Describe</Button>
 		</div>
 	);
