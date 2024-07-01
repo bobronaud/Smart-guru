@@ -5,7 +5,7 @@ import { FiltersMenu } from './components/filters/FiltersMenu';
 const App = () => {
 	const [count, setCount] = useState(0);
 	const handleclick = () => {
-		setCount(prev => prev + 1);
+		setCount((prev) => prev + 1);
 	};
 	return (
 		<div>

@@ -1,13 +1,129 @@
+@import '../../../assets/styles/variables';
+
 .btn {
+	cursor: pointer;
 	display: inline-block;
+	border-radius: 5px;
 
-	width: 100px;
-	height: 50px;
+	&:disabled {
+		cursor: default;
+	}
+}
 
-	font-size: 16px;
-	color: #fff;
+svg {
+	width: 24px;
+	height: 24px;
+	stroke-width: 2px;
+}
 
-	background-color: black;
-	border-radius: 10px;
-	box-shadow: 5px 5px 10px black;
+.children {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	justify-content: center;
+}
+
+.primary {
+	color: $primary-text-color;
+	background-color: $primary-bg-color;
+	border: none;
+	stroke: $primary-text-color;
+
+	&:hover {
+		color: $primary-text-color-hover;
+		background-color: $primary-bg-color-hover;
+		border: 1px solid $primary-border-color-hover;
+		stroke: $primary-text-color-hover;
+	}
+
+	&:disabled {
+		color: $primary-text-color-disabled;
+		background-color: $primary-bg-color-disabled;
+		border: none;
+		stroke: $primary-text-color-disabled;
+	}
+}
+
+.secondary {
+	color: $secondary-text-color;
+	background-color: $secondary-bg-color;
+	border: none;
+	stroke: $secondary-text-color;
+
+	&:hover {
+		color: $secondary-text-color-hover;
+		background-color: $secondary-bg-color-hover;
+		border: 1px solid $secondary-border-color-hover;
+		stroke: $secondary-text-color-hover;
+	}
+
+	&:disabled {
+		color: $secondary-text-color-disabled;
+		background-color: $secondary-bg-color-disabled;
+		border: 1px solid $secondary-border-color-disabled;
+		stroke: $secondary-text-color-disabled;
+	}
+}
+
+.outlined {
+	color: $outlined-text-color;
+	background-color: $outlined-bg-color;
+	border: 1px solid #9ea5ad;
+	stroke: $outlined-text-color;
+
+	&:hover {
+		color: $outlined-text-color-hover;
+		background-color: $outlined-bg-color-hover;
+		border: 1px solid $outlined-border-color-hover;
+		stroke: $outlined-text-color-hover;
+	}
+
+	&:disabled {
+		color: $outlined-text-color-disabled;
+		background-color: $outlined-bg-color-disabled;
+		border: 1px solid $outlined-border-color-disabled;
+		stroke: $outlined-text-color-disabled;
+	}
+}
+
+.lg {
+	min-width: 169px;
+	height: 54px;
+	padding: 15px 15px 15px 20px;
+
+	font-size: $font-size-lg-desktop;
+	font-weight: $font-weight-lg-desktop;
+	line-height: $line-height-lg-desktop;
+}
+
+.sm {
+	min-width: 146px;
+	height: 34px;
+	padding: 5px, 10px, 5px, 15px;
+
+	font-size: $font-size-sm-desktop;
+	font-weight: $font-weight-sm-desktop;
+	line-height: $line-height-sm-desktop;
+}
+
+@media (width <= 1000px) {
+	.lg {
+		min-width: 151px;
+		height: 44px;
+		padding: 10px 10px 10px 15px;
+
+		font-size: $font-size-lg-tablet;
+		font-weight: $font-weight-lg-tablet;
+		line-height: $line-height-lg-tablet;
+	}
+
+	.sm {
+		min-width: 128px;
+		height: 30px;
+		padding: 53px, 5px, 3px, 10px;
+
+		font-size: $font-size-sm-tablet;
+		font-weight: $font-weight-sm-tablet;
+		line-height: $line-height-sm-tablet;
+	}
 }
