@@ -21,6 +21,7 @@
 	display: flex;
 	align-items: center;
 	width: 100%;
+	// padding: 0 10px 0 15px;
 }
 
 .label_container.open {
@@ -74,7 +75,7 @@
 
 	width: calc(100% + 4px);
 	max-height: 548px;
-	padding: 0 10px 0 15px;
+	padding: 0 10px 10px 15px;
 }
 
 .dropdown_options.open {
@@ -94,12 +95,9 @@
 	cursor: pointer;
 
 	width: 100%;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding: 10px 0 10px 10px;
 
 	list-style-type: none;
-
-	background-color: #fff;
 	border-radius: 4px;
 }
 
@@ -109,4 +107,25 @@
 
 .dropdown_option:active {
 	background-color: #f0f0f0;
+}
+
+/* Стилизация всего скроллбара */
+.dropdown_options::-webkit-scrollbar {
+	width: 7px;
+}
+
+/* Стилизация трека скроллбара */
+.dropdown_options::-webkit-scrollbar-track {
+	background: none;
+}
+
+/* Стилизация ползунка скроллбара */
+.dropdown_options::-webkit-scrollbar-thumb {
+	background: #f7a121;
+	border-radius: 50px;
+}
+
+/* Дополнительная стилизация при наведении на ползунок */
+.dropdown_options::-webkit-scrollbar-thumb:hover {
+	background: #d98b1a;
 }
