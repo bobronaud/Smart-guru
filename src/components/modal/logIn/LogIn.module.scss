@@ -1,11 +1,104 @@
+$color-black: #292929;
+$color-white: #fff;
+$color-grey: #9ea5ad;
+$color-lightgrey: #ededed;
+$color-orange: #f7a121;
+
 .container {
 	display: flex;
 	flex-direction: column;
+	gap: 30px;
 	align-items: center;
 	justify-content: center;
 
 	width: 634px;
-	height: 300px;
+	padding: 50px;
 
-	background-color: #fff;
+	background-color: $color-white;
+	border: 1px solid $color-lightgrey;
+	border-radius: 10px;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+
+	.title {
+		font-size: 32px;
+		font-weight: 800;
+		line-height: 41.6px;
+		color: $color-black;
+	}
+
+	svg {
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	width: 100%;
+}
+
+.input {
+	height: 53px;
+	padding: 15px 10px 15px 15px;
+
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 23.4px;
+	color: $color-black;
+
+	border: 1px solid $color-lightgrey;
+	border-radius: 5px;
+
+	&::placeholder {
+		color: $color-black;
+	}
+
+	&:focus {
+		border-color: $color-orange;
+	}
+}
+
+.additional {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.savePassword {
+		display: flex;
+		gap: 5px;
+		align-items: center;
+	}
+
+	.recovery {
+		&:hover {
+			cursor: pointer;
+			text-decoration: underline $color-grey;
+		}
+	}
+}
+
+.buttons {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+
+	& > button {
+		flex: 1;
+	}
+}
+
+.secondaryText {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 18.2px;
+	color: $color-grey;
 }

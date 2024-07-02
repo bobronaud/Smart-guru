@@ -1,0 +1,18 @@
+.checkbox[type='checkbox'] {
+	cursor: pointer;
+	width: 24px;
+	height: 24px;
+
+	// преобразуем дефолтный синий цвет в оранжевый
+	filter: hue-rotate(170deg) brightness(200%);
+
+	&:hover {
+		// по умолчанию при наведении цвет затемняется, поэтому прибавляем яркость, чтобы цвет оставался таким же
+		filter: hue-rotate(170deg) brightness(250%);
+	}
+
+	&:active {
+		// по умолчанию при нажатии цвет затемняется, поэтому прибавляем яркость, чтобы цвет оставался таким же
+		filter: hue-rotate(170deg) brightness(130%);
+	}
+}
