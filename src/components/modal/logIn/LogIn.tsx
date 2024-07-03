@@ -1,14 +1,13 @@
 import CloseSVG from '@/assets/icons/close.svg';
+import PasswordInput from '@/components/forms/passwordInput/PasswordInput';
 import Button from '@/components/ui/button/Button';
 import Checkbox from '@/components/ui/checkbox/Checkbox';
 import { useAppDispatch } from '@/hooks';
 import { closeModal } from '@/store/slices/modalSlice';
 import { useFormik } from 'formik';
-import { useState } from 'react';
 import styles from './LogIn.module.scss';
 
 const LogIn = () => {
-	const [isVisiblePassword] = useState(false);
 	const dispatch = useAppDispatch();
 	const handleClose = () => {
 		dispatch(closeModal());
@@ -42,9 +41,8 @@ const LogIn = () => {
 					value={formik.values.email}
 					placeholder='Логин или e-mail'
 				/>
-				<input
+				<PasswordInput
 					className={styles.input}
-					type={isVisiblePassword ? 'text' : 'password'}
 					name='password'
 					id='password'
 					onChange={formik.handleChange}
