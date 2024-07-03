@@ -1,14 +1,14 @@
-import { useState } from 'react';
 import Button from './components/ui/button/Button';
+import { useAppDispatch } from './hooks';
+import { openModal } from './store/slices/modalSlice';
 
 const App = () => {
-	const [count, setCount] = useState(0);
+	const dispatch = useAppDispatch();
 	const handleclick = () => {
-		setCount((prev) => prev + 1);
+		dispatch(openModal('logIn'));
 	};
 	return (
 		<div>
-			<h1>Smart-guru describers: {count}</h1>
 			<Button onClick={handleclick}>Describe</Button>
 		</div>
 	);
