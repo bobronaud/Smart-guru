@@ -1,18 +1,72 @@
-.checkbox[type='checkbox'] {
+$color-white: #fff;
+$color-lightgray: #ededed;
+$color-orange: #f7a121;
+
+.defaultCheckbox {
+	display: none;
+}
+
+/* Стили для контейнера */
+.customCheckbox {
 	cursor: pointer;
+	position: relative;
+	display: inline-block;
+	padding-left: 30px;
+}
+
+/* Создаем кастомный чекбокс */
+.checkmark {
+	position: absolute;
+	top: -10px;
+	left: 0;
+
 	width: 24px;
 	height: 24px;
 
-	// преобразуем дефолтный синий цвет в оранжевый
-	filter: hue-rotate(170deg) brightness(200%);
+	background-color: $color-white;
+	border: 2px solid $color-lightgray;
+	border-radius: 3px;
+}
 
-	&:hover {
-		// по умолчанию при наведении цвет затемняется, поэтому прибавляем яркость, чтобы цвет оставался таким же
-		filter: hue-rotate(170deg) brightness(250%);
+/* Стили для галочки внутри кастомного чекбокса */
+.customCheckbox .checkmark::after {
+	content: '';
+
+	position: absolute;
+	top: 3px;
+	left: 7px;
+	transform: rotate(45deg);
+
+	display: none;
+
+	width: 7px;
+	height: 12px;
+
+	border: 2px solid white;
+	border-width: 0 3px 3px 0;
+}
+
+/* Стили для активного состояния чекбокса */
+.customCheckbox input:checked ~ .checkmark {
+	background-color: $color-orange;
+	border: 2px solid $color-orange;
+
+	/* Отображение галочки при чекнутом состоянии */
+	&::after {
+		display: block;
+	}
+}
+
+@media (width <= 1000px) {
+	.checkmark {
+		width: 20px;
+		height: 20px;
 	}
 
-	&:active {
-		// по умолчанию при нажатии цвет затемняется, поэтому прибавляем яркость, чтобы цвет оставался таким же
-		filter: hue-rotate(170deg) brightness(130%);
+	.customCheckbox .checkmark::after {
+		top: 2px;
+		left: 6px;
+		width: 6px;
+		height: 10px;
 	}
 }

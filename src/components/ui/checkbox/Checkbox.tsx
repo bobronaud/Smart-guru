@@ -2,12 +2,12 @@ import styles from './Checkbox.module.scss';
 
 const Checkbox = () => {
 	return (
-		<label>
+		<label className={styles.customCheckbox}>
 			<input
-				className={styles.checkbox}
+				className={styles.defaultCheckbox}
 				type='checkbox'
 			/>
-			{/* <span className={styles.custom}></span> */}
+			<span className={styles.checkmark}></span>
 		</label>
 	);
 };
