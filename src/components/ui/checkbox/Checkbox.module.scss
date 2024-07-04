@@ -9,16 +9,14 @@ $color-orange: #f7a121;
 /* Стили для контейнера */
 .customCheckbox {
 	cursor: pointer;
-	position: relative;
 	display: inline-block;
-	padding-left: 20px;
+	width: 24px;
+	height: 24px;
 }
 
 /* Создаем кастомный чекбокс */
 .checkmark {
 	position: absolute;
-	top: -10px;
-	left: 0;
 
 	width: 24px;
 	height: 24px;
@@ -26,6 +24,10 @@ $color-orange: #f7a121;
 	background-color: $color-white;
 	border: 2px solid $color-lightgray;
 	border-radius: 3px;
+
+	&:hover {
+		border-color: $color-orange;
+	}
 }
 
 /* Стили для галочки внутри кастомного чекбокса */
@@ -58,6 +60,7 @@ $color-orange: #f7a121;
 }
 
 @media (width <= 1000px) {
+	.customCheckbox,
 	.checkmark {
 		width: 20px;
 		height: 20px;

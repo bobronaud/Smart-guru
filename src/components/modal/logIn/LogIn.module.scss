@@ -105,6 +105,7 @@ $color-orange: #f7a121;
 
 @media (width <= 1000px) {
 	.container {
+		max-width: 90%;
 		padding: 30px;
 	}
 
@@ -121,11 +122,6 @@ $color-orange: #f7a121;
 }
 
 @media (width <= 500px) {
-	.container {
-		flex: 1;
-		margin: 0 20px;
-	}
-
 	.buttons {
 		flex-direction: column;
 

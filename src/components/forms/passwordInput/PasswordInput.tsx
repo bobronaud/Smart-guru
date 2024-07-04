@@ -15,7 +15,6 @@ const PasswordInput = (props: Props) => {
 	return (
 		<>
 			<input
-				className={styles.input}
 				type={isVisiblePassword ? 'text' : 'password'}
 				{...props}
 			/>
