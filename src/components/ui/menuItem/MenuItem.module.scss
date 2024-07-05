@@ -98,7 +98,7 @@ $border-color-hover: #ededed;
 	}
 }
 
-@media (width <= 360px) {
+@media (width <= 520px) {
 	.menuItem {
 		width: $width-mobile;
 		height: $heigth-mobile;
