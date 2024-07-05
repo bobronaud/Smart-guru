@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import styles from './Navbar.module.scss';
 
 import MenuItem from '../ui/menuItem/MenuItem';
@@ -10,24 +9,32 @@ import ReviewsSvg from '@/assets/icons/reviews.svg';
 import SettingsSvg from '@/assets/icons/settings.svg';
 import SignOutSvg from '@/assets/icons/signOut.svg';
 import LogoDesktop from '@/assets/logos/logoDesktop.svg';
+import routes from '@/routes';
+import { useLocation } from 'react-router-dom';
 
 const Navbar = () => {
-	const [active, setActive] = useState('Каталог');
+	const location = useLocation();
+	const currentPath = location.pathname;
+
 	const navButtons = [
 		{
 			name: 'Каталог',
+			path: routes.catalog(),
 			svg: <CatalogSvg />,
 		},
 		{
 			name: 'Записи',
+			path: routes.records(),
 			svg: <RecordsSvg />,
 		},
 		{
 			name: 'Сертификаты',
+			path: routes.myCertificates(),
 			svg: <CertifitacesSvg />,
 		},
 		{
 			name: 'Отзывы',
+			path: routes.reviews(),
 			svg: <ReviewsSvg />,
 		},
 	];
@@ -38,14 +45,14 @@ const Navbar = () => {
 				<LogoDesktop className={styles.logo} />
 				<nav>
 					<ul className={styles.menuNav}>
-						{navButtons.map(({ name, svg }) => (
+						{navButtons.map(({ name, path, svg }) => (
 							<li
 								className={styles.menuItem}
 								key={name}
 							>
 								<MenuItem
-									onClick={() => setActive(name)}
-									active={active === name}
+									to={path}
+									active={currentPath === path}
 								>
 									{svg}
 									<p className={styles.buttonText}>{name}</p>
@@ -58,17 +65,14 @@ const Navbar = () => {
 			<nav className={styles.menuExit}>
 				<div>
 					<MenuItem
-						onClick={() => setActive('Настройки')}
-						active={active === 'Настройки'}
+						to={routes.settings()}
+						active={currentPath === routes.settings()}
 					>
 						<SettingsSvg />
 						<p>Настройки</p>
 					</MenuItem>
 
-					<MenuItem
-						onClick={() => setActive('Выход')}
-						active={active === 'Выход'}
-					>
+					<MenuItem>
 						<SignOutSvg />
 						<p>Выход</p>
 					</MenuItem>
