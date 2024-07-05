@@ -1,6 +1,6 @@
+import Clock from '@/assets/icons/clock.svg';
 import Button from '@/components/ui/button/Button';
 import styles from './UiKit.module.scss';
-import Clock from '@/assets/icons/clock.svg';
 
 const UiKit = () => {
 	return (
