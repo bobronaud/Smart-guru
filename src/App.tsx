@@ -5,11 +5,11 @@ import { openModal } from './store/slices/modalSlice';
 const App = () => {
 	const dispatch = useAppDispatch();
 	const handleclick = () => {
-		dispatch(openModal('logIn'));
+		dispatch(openModal('signUp'));
 	};
 	return (
 		<div>
-			<Button onClick={handleclick}>Describe</Button>
+			<Button onClick={handleclick}>open modal</Button>
 		</div>
 	);
 };

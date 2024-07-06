@@ -1,3 +1,9 @@
+$color-black: #292929;
+$color-white: #fff;
+$color-grey: #9ea5ad;
+$color-lightgrey: #ededed;
+$color-orange: #f7a121;
+
 .bg {
 	position: fixed;
 	inset: 0;
@@ -10,6 +16,22 @@
 	background-color: #0000004d;
 }
 
+.wrapper {
+	width: 634px;
+	padding: 50px;
+
+	background-color: $color-white;
+	border: 1px solid $color-lightgrey;
+	border-radius: 10px;
+}
+
 *:focus {
 	outline: none;
+}
+
+@media (width <= 1000px) {
+	.wrapper {
+		max-width: 90%;
+		padding: 30px;
+	}
 }

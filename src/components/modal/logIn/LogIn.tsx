@@ -3,7 +3,7 @@ import PasswordInput from '@/components/forms/passwordInput/PasswordInput';
 import Button from '@/components/ui/button/Button';
 import Checkbox from '@/components/ui/checkbox/Checkbox';
 import { useAppDispatch } from '@/hooks';
-import { closeModal } from '@/store/slices/modalSlice';
+import { closeModal, openModal } from '@/store/slices/modalSlice';
 import { useFormik } from 'formik';
 import styles from './LogIn.module.scss';
 
@@ -12,6 +12,11 @@ const LogIn = () => {
 	const handleClose = () => {
 		dispatch(closeModal());
 	};
+
+	const handleSignUp = () => {
+		dispatch(openModal('signUp'));
+	};
+
 	const formik = useFormik({
 		initialValues: {
 			email: '',
@@ -59,7 +64,12 @@ const LogIn = () => {
 				<div className={styles.buttons}>
 					<Button type='submit'>Войти</Button>
 					<span className={styles.secondaryText}>или</span>
-					<Button variant='outlined'>Регистрация</Button>
+					<Button
+						variant='outlined'
+						onClick={handleSignUp}
+					>
+						Регистрация
+					</Button>
 				</div>
 			</form>
 		</div>

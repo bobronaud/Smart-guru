@@ -37,7 +37,13 @@ const Modal = () => {
 		};
 	}, []);
 
-	return isOpen && <div className={styles.bg}>{modals[type]}</div>;
+	return (
+		isOpen && (
+			<div className={styles.bg}>
+				<div className={styles.wrapper}>{modals[type]}</div>
+			</div>
+		)
+	);
 };
 
 export default Modal;

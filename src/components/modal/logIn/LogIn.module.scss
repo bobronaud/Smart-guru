@@ -10,13 +10,6 @@ $color-orange: #f7a121;
 	gap: 30px;
 	align-items: center;
 	justify-content: center;
-
-	width: 634px;
-	padding: 50px;
-
-	background-color: $color-white;
-	border: 1px solid $color-lightgrey;
-	border-radius: 10px;
 }
 
 .header {
@@ -104,11 +97,6 @@ $color-orange: #f7a121;
 }
 
 @media (width <= 1000px) {
-	.container {
-		max-width: 90%;
-		padding: 30px;
-	}
-
 	.title {
 		font-size: 24px;
 		font-weight: 700;
