@@ -1,45 +1,88 @@
 import classNames from 'classnames/bind';
+import { useEffect, useState } from 'react';
 import styles from './SidebarComments.module.scss';
 
 const cx = classNames.bind(styles);
 
+import ImageExit from '../../assets/icons/arrowExit.svg';
 import image from './1.jpeg';
+interface SidebarCommentsProps {
+	title: string;
+}
+const SidebarComments: React.FC<SidebarCommentsProps> = ({ title }) => {
+	const [toggle, setToggle] = useState(true);
 
-const SidebarComments = () => {
+	const toggleFunc = () => {
+		setToggle((prevState) => !prevState);
+	};
+
+	useEffect(() => {
+		if (toggle) {
+			document.body.classList.add(styles['body']);
+		} else {
+			document.body.classList.remove(styles['body']);
+		}
+
+		return () => {
+			document.body.classList.remove(styles['body']);
+		};
+	}, [toggle]);
 	return (
-		<div className={cx('wrapper')}>
-			<h2 className={cx('title')}>Редактировать отзыв</h2>
-			<div className={cx('item-wrapper')}>
-				<img
-					src={image}
-					alt=''
-					className={cx('image')}
-				/>
-				<div>
-					<h3 className={cx('title-сourse')}>Яндекс Практикум</h3>
-					<p className={cx('text')}>Программирование</p>
+		<div className={cx(toggle ? 'container' : null)}>
+			{' '}
+			<div className={cx('wrapper', toggle ? 'active' : null)}>
+				<div className={cx('wrapper-title')}>
+					<h2 className={cx('title')}>{title}</h2>
+
+					<ImageExit
+						width='24'
+						height='24'
+						className={cx('image-exit')}
+						onClick={toggleFunc}
+					/>
 				</div>
+				<div className={cx('item-wrapper')}>
+					<img
+						src={image}
+						alt=''
+						className={cx('image')}
+					/>
+					<div>
+						<h3 className={cx('title-сourse')}>Яндекс Практикум</h3>
+						<p className={cx('text')}>Программирование</p>
+					</div>
+				</div>
+				<form className={cx('form')}>
+					<div>
+						<label className={cx('label')}>ФИО</label>
+						<input
+							type='text'
+							className={cx('input')}
+						/>
+					</div>
+					<div>
+						<label className={cx('label')}>Ваша роль</label>
+						<select
+							id='fruits'
+							name='fruits'
+							className={cx('input', 'select')}
+						>
+							<option value='Проходил курс'>Проходил курс</option>
+							<option value='Видел обзор на курс'>Видел обзор на курс</option>
+							<option value='Яблоко'>Яблоко</option>
+						</select>
+					</div>
+					<div>
+						<label className={cx('label')}>Введите текст отзывы</label>
+						<input
+							type='text'
+							className={cx('input', 'input-reviews')}
+						/>
+					</div>
+
+					<button className={cx('button')}>Сохранить</button>
+				</form>
 			</div>
-			<form className={cx('form')}>
-				<div>
-					<label className={cx('label')}>ФИО</label>
-					<input
-						type='text'
-						className={cx('input')}
-					/>
-				</div>{' '}
-				<div>
-					<label className={cx('label')}>ФИО</label>
-					<input
-						type='text'
-						className={cx('input')}
-					/>
-				</div>{' '}
-				<div>
-					<label className={cx('label')}>ФИО</label>
-					<input type='text' />
-				</div>
-			</form>
 		</div>
 	);
 };
