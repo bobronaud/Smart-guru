@@ -8,8 +8,9 @@ import ImageExit from '../../assets/icons/arrowExit.svg';
 import image from './1.jpeg';
 interface SidebarCommentsProps {
 	title: string;
+	sendText: string;
 }
-const SidebarComments: React.FC<SidebarCommentsProps> = ({ title }) => {
+const SidebarComments: React.FC<SidebarCommentsProps> = ({ title, sendText }) => {
 	const [toggle, setToggle] = useState(true);
 
 	const toggleFunc = () => {
@@ -80,7 +81,7 @@ const SidebarComments: React.FC<SidebarCommentsProps> = ({ title }) => {
 						/>
 					</div>
 
-					<button className={cx('button')}>Сохранить</button>
+					<button className={cx('button')}>{sendText}</button>
 				</form>
 			</div>
 		</div>
