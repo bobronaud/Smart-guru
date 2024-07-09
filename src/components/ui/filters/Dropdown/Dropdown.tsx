@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import SimpleBar from 'simplebar-react';
+import 'simplebar-react/dist/simplebar.min.css';
 import ArrowBtn from '../Dropdown/Vector108.svg';
 import styles from './Dropdown.module.scss';
+import './Simplebar.scss';
 
 //пользовательский тип, чтобы потом типизировать массив с опциями
 //с помощью value будет отправлять ответ на сервер, label наша подпись к опции
@@ -36,21 +39,27 @@ export const Dropdown: React.FC<DropdownProps> = ({ label, options }) => {
 				</div>
 			</div>
 			{isOpen && (
-				<ul
-					className={`${styles.dropdown_options} ${isOpen ? styles.open : ''}`}
-					onClick={(e) => e.stopPropagation()} // Останавливаем распространение клика, чтобы не закрывался список
+				<SimpleBar
+					className={`${styles.dropdown_options} ${isOpen ? styles.open : ''} simplebar`}
+					// Останавливаем распространение клика, чтобы не закрывался список
+					onClick={(e) => e.stopPropagation()}
+					forceVisible='y'
+					autoHide={false}
 				>
-					{options.map((option, index) => (
-						<li
-							key={index}
-							value={option.value}
-							className={styles.dropdown_option}
-							onClick={handleClose}
-						>
-							{option.label}
-						</li>
-					))}
-				</ul>
+					<div className={styles.line_container}></div>
+					<ul>
+						{options.map((option, index) => (
+							<li
+								key={index}
+								value={option.value}
+								className={styles.dropdown_option}
+								onClick={handleClose}
+							>
+								{option.label}
+							</li>
+						))}
+					</ul>
+				</SimpleBar>
 			)}
 		</div>
 	);
