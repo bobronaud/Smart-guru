@@ -6,6 +6,8 @@ import { ModalType } from '@/types/modal';
 import { useEffect } from 'react';
 import styles from './Modal.module.scss';
 import LogIn from './logIn/LogIn';
+import RecoveryNewPassword from './recovery/RecoveryNewPassword';
+import RecoveryRequest from './recovery/RecoveryRequest';
 import Role from './role/Role';
 import SignUp from './signUp/SignUp';
 
@@ -21,6 +23,8 @@ const Modal = () => {
 		signUp: <SignUp />,
 		logIn: <LogIn />,
 		role: <Role />,
+		recoveryRequest: <RecoveryRequest />,
+		recoveryNewPassword: <RecoveryNewPassword />,
 	};
 
 	useEffect(() => {

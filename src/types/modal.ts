@@ -1,4 +1,4 @@
-export type ModalType = 'logIn' | 'signUp' | 'role';
+export type ModalType = 'logIn' | 'signUp' | 'role' | 'recoveryRequest' | 'recoveryNewPassword';
 
 export type State = {
 	type: ModalType;

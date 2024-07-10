@@ -4,9 +4,9 @@ import Button from '@/components/ui/button/Button';
 import { useAppDispatch } from '@/hooks';
 import { closeModal } from '@/store/slices/modalSlice';
 import { useFormik } from 'formik';
-import styles from './SignUp.module.scss';
+import styles from './Recovery.module.scss';
 
-const SignUp = () => {
+const RecoveryNewPassword = () => {
 	const dispatch = useAppDispatch();
 	const handleClose = () => {
 		dispatch(closeModal());
@@ -14,8 +14,6 @@ const SignUp = () => {
 
 	const formik = useFormik({
 		initialValues: {
-			email: '',
-			login: '',
 			password: '',
 			confirmPassword: '',
 		},
@@ -27,28 +25,10 @@ const SignUp = () => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.header}>
-				<h2 className={styles.title}>Регистрация</h2>
+				<h2 className={styles.title}>Восстановление пароля</h2>
 				<CloseSVG onClick={handleClose} />
 			</div>
 			<form className={styles.form}>
-				<input
-					className={styles.input}
-					type='text'
-					name='email'
-					id='email'
-					onChange={formik.handleChange}
-					value={formik.values.email}
-					placeholder='E-mail'
-				/>
-				<input
-					className={styles.input}
-					type='text'
-					name='login'
-					id='login'
-					onChange={formik.handleChange}
-					value={formik.values.login}
-					placeholder='Логин'
-				/>
 				<PasswordInput
 					className={styles.input}
 					name='password'
@@ -67,14 +47,14 @@ const SignUp = () => {
 				/>
 			</form>
 			<Button
-				className={styles.button}
 				onClick={formik.submitForm}
 				disabled={formik.isSubmitting}
+				className={styles.button}
 			>
-				Регистрация
+				Восстановить
 			</Button>
 		</div>
 	);
 };
 
-export default SignUp;
+export default RecoveryNewPassword;

@@ -17,6 +17,10 @@ const LogIn = () => {
 		dispatch(openModal('signUp'));
 	};
 
+	const handleRecovery = () => {
+		dispatch(openModal('recoveryRequest'));
+	};
+
 	const formik = useFormik({
 		initialValues: {
 			email: '',
@@ -33,10 +37,7 @@ const LogIn = () => {
 				<h2 className={styles.title}>Авторизация</h2>
 				<CloseSVG onClick={handleClose} />
 			</div>
-			<form
-				className={styles.form}
-				onSubmit={formik.handleSubmit}
-			>
+			<form className={styles.form}>
 				<input
 					className={styles.input}
 					type='text'
@@ -59,19 +60,29 @@ const LogIn = () => {
 						<Checkbox />
 						<span className={styles.secondaryText}>Сохранить пароль</span>
 					</div>
-					<span className={`${styles.recovery} ${styles.secondaryText}`}>Забыли пароль?</span>
-				</div>
-				<div className={styles.buttons}>
-					<Button type='submit'>Войти</Button>
-					<span className={styles.secondaryText}>или</span>
-					<Button
-						variant='outlined'
-						onClick={handleSignUp}
+					<span
+						onClick={handleRecovery}
+						className={`${styles.recovery} ${styles.secondaryText}`}
 					>
-						Регистрация
-					</Button>
+						Забыли пароль?
+					</span>
 				</div>
 			</form>
+			<div className={styles.buttons}>
+				<Button
+					onClick={formik.submitForm}
+					disabled={formik.isSubmitting}
+				>
+					Войти
+				</Button>
+				<span className={styles.secondaryText}>или</span>
+				<Button
+					variant='outlined'
+					onClick={handleSignUp}
+				>
+					Регистрация
+				</Button>
+			</div>
 		</div>
 	);
 };

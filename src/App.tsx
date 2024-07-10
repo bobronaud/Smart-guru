@@ -5,7 +5,7 @@ import { openModal } from './store/slices/modalSlice';
 const App = () => {
 	const dispatch = useAppDispatch();
 	const handleclick = () => {
-		dispatch(openModal('signUp'));
+		dispatch(openModal('recoveryNewPassword'));
 	};
 	return (
 		<div>
