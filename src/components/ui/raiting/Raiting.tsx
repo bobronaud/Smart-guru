@@ -10,7 +10,7 @@ const Raiting = ({ score }: Props) => {
 	const scores = [1, 2, 3, 4, 5];
 	return (
 		<div className={styles.container}>
-			{scores.map(value => {
+			{scores.map((value) => {
 				if (score >= value) {
 					return <FillStar key={value} />;
 				} else return <EmptyStar key={value} />;
