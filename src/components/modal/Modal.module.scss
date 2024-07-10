@@ -17,7 +17,8 @@ $color-orange: #f7a121;
 }
 
 .wrapper {
-	width: 634px;
+	min-width: 600px;
+	max-width: 1200px;
 	padding: 50px;
 
 	background-color: $color-white;
@@ -31,6 +32,7 @@ $color-orange: #f7a121;
 
 @media (width <= 1000px) {
 	.wrapper {
+		min-width: 90%;
 		max-width: 90%;
 		padding: 30px;
 	}
