@@ -1,9 +1,9 @@
-import Bell from '@/components/ui/bell/Bell';
-import classes from './TopBar.module.scss';
-import useWindowWidth from '@/hooks/useWindowWidth';
-import HeartSVG from '@/assets/icons/heart.svg';
 import BigLogoSVG from '@/assets/icons/biglogo.svg';
+import HeartSVG from '@/assets/icons/heart.svg';
 import SmallLogoSVG from '@/assets/icons/smalllogo.svg';
+import Bell from '@/components/ui/bell/Bell';
+import useWindowWidth from '@/hooks/useWindowWidth';
+import classes from './TopBar.module.scss';
 
 const TopBar = () => {
 	const dispWidth = useWindowWidth();
