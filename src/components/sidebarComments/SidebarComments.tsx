@@ -5,6 +5,7 @@ import styles from './SidebarComments.module.scss';
 const cx = classNames.bind(styles);
 
 import ImageExit from '../../assets/icons/arrowExit.svg';
+import StarRating from '../ui/starRating/StarRating';
 import image from './1.jpeg';
 interface SidebarCommentsProps {
 	title: string;
@@ -12,7 +13,7 @@ interface SidebarCommentsProps {
 }
 const SidebarComments: React.FC<SidebarCommentsProps> = ({ title, sendText }) => {
 	const [toggle, setToggle] = useState(true);
-
+	const [currentItem, setCurrentItem] = useState();
 	const toggleFunc = () => {
 		setToggle((prevState) => !prevState);
 	};
@@ -78,6 +79,13 @@ const SidebarComments: React.FC<SidebarCommentsProps> = ({ title, sendText }) =>
 						<input
 							type='text'
 							className={cx('input', 'input-reviews')}
+						/>
+					</div>
+					<div className={cx('wrapper-reting')}>
+						<p className={cx('text')}>Рейтинг:</p>
+						<StarRating
+							currentItem={currentItem}
+							setCurrentItem={setCurrentItem}
 						/>
 					</div>
 
