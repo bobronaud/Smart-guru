@@ -1,0 +1,36 @@
+@import '../../../../assets/styles/variables';
+
+.filters_button {
+	cursor: pointer;
+
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	justify-content: center;
+
+	height: 44px;
+	padding-top: 11px;
+	padding-bottom: 11px;
+
+	font-size: 16px;
+
+	background-color: #fff;
+	border-radius: 5px;
+	outline: 2px solid #9ea5ad;
+}
+
+.filters_button:hover {
+	outline: 2px solid #f7a121;
+}
+
+@media (min-width: $breakpoint-sm-down) and (width <= 1023px) {
+	.filters_button {
+		width: 960px;
+	}
+}
+
+@media (max-width: $breakpoint-sm-down) {
+	.filters_button {
+		width: 320px;
+	}
+}

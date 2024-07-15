@@ -58,10 +58,26 @@ export default (env: EnvVariables) => {
 					use: 'ts-loader',
 					exclude: /node_modules/,
 				},
+				//новые настройки начало
 				{
-					test: /\.(c|sa|sc)ss$/,
+					test: /\.module\.s[ac]ss$/,
 					use: [isDev ? 'style-loader' : MiniCssExtractPlugin.loader, cssLoaderWithModules, 'sass-loader'],
 				},
+				{
+					test: /\.s[ac]ss$/,
+					exclude: /\.module\.s[ac]ss$/,
+					use: [isDev ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+				},
+				{
+					test: /\.module\.css$/,
+					use: [isDev ? 'style-loader' : MiniCssExtractPlugin.loader, cssLoaderWithModules],
+				},
+				{
+					test: /\.css$/,
+					exclude: /\.module\.css$/,
+					use: [isDev ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader'],
+				},
+				//новые настройки конец
 				{
 					test: /\.(png|jpg|jpeg|gif)$/i,
 					type: 'asset/resource',

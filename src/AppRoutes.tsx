@@ -1,6 +1,7 @@
-import App from './App';
 import { Route, Routes } from 'react-router-dom';
-import UiKit from './components/pages/uiKit/UiKit';
+import App from './App';
+import MyCertificates from './pages/myCertificates/MyCertificates';
+import UiKit from './pages/uiKit/UiKit';
 import routes from './routes';
 
 const AppRoutes = () => {
@@ -13,6 +14,10 @@ const AppRoutes = () => {
 			<Route
 				path={routes.uiKit()}
 				element={<UiKit />}
+			/>
+			<Route
+				path={routes.myCertificates()}
+				element={<MyCertificates />}
 			/>
 		</Routes>
 	);
