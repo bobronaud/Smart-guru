@@ -1,6 +1,6 @@
 .main_container {
 	margin-block-start: 30px;
-	margin-inline-start: 30px;
+	margin-inline: 30px 30px;
 }
 
 .tabs_container {
@@ -30,4 +30,24 @@
 	color: #fff;
 	background-color: #f7a121;
 	border: none;
+}
+
+.tab_content {
+	display: none;
+}
+
+.tab_content.active {
+	display: block;
+}
+
+.switch_tab_content {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+@media (width < 1024px) {
+	.main_container {
+		margin-block-end: 74px;
+	}
 }

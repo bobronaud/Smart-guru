@@ -1,3 +1,5 @@
+@import '../../../assets/styles/variables';
+
 .profile_settings {
 	display: flex;
 	gap: 30px;
@@ -48,4 +50,16 @@
 
 .profile_button:last-child {
 	color: #9ea5ad;
+}
+
+@media (width <= $breakpoint-sm-down) {
+	.profile_settings {
+		flex-direction: column;
+	}
+}
+
+@media (width < 1440px) {
+	.text_container {
+		width: clamp(20rem, 2.9231rem + 26.6827vw, 26.9375rem);
+	}
 }
