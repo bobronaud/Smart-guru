@@ -4,6 +4,5 @@
 *.js
 *.md
 *.svg
-*.png
 /node_modules
 src/assets/fonts/**
