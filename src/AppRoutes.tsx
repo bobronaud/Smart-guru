@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import App from './App';
+import { MainPage } from './pages/mainPage/mainPage';
 import MyCertificates from './pages/myCertificates/MyCertificates';
 import { MySettings } from './pages/mySettings/MySettingsPage';
 import UiKit from './pages/uiKit/UiKit';
@@ -10,7 +10,7 @@ const AppRoutes = () => {
 		<Routes>
 			<Route
 				index
-				element={<App />}
+				element={<MainPage />}
 			/>
 			<Route
 				path={routes.uiKit()}

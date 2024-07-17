@@ -1,0 +1,38 @@
+.settings_container {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.settings_content {
+	width: calc(100% - 300px);
+}
+
+.main_container {
+	padding-inline-start: 30px;
+}
+
+.card_container {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 20px;
+}
+
+@media (width <=1440px) and (width>=1001px) {
+	.settings_content {
+		width: calc(100% - 237px);
+	}
+}
+
+@media (width <= 1000px) {
+	.settings_content {
+		width: 100%;
+	}
+}
+
+@media (width <= 600px) {
+	.settings_content {
+		width: 100%;
+	}
+}
