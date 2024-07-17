@@ -1,5 +1,6 @@
 import Clock from '@/assets/icons/clock.svg';
 import Button from '@/components/ui/button/Button';
+import { FiltersMenu } from '@/components/ui/filters/FiltersMenu';
 import Place from '@/components/ui/place/Place';
 import styles from './UiKit.module.scss';
 
@@ -102,6 +103,7 @@ const UiKit = () => {
 					</Button>
 				</div>
 			</div>
+			<FiltersMenu></FiltersMenu>
 			<hr />
 			<div /*div с лейблами о наборе*/>
 				<div className={styles.block}>
