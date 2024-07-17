@@ -23,14 +23,11 @@ $svg-color-active: #f7a121;
 }
 
 @mixin font-subtitle-organization($device) {
-
 	@if $device == desktop {
 		font-size: 18px;
 		font-weight: 600;
-				line-height: 23.4px;
-	}
-
- @else {
+		line-height: 23.4px;
+	} @else {
 		font-size: 16px;
 		font-weight: 500;
 		line-height: 20.8px;
@@ -40,12 +37,10 @@ $svg-color-active: #f7a121;
 @mixin font-subtitle-direction($device) {
 	font-weight: 400;
 
-	@if $device == desktop  {
+	@if $device == desktop {
 		font-size: 16px;
 		line-height: 24px;
-	}
-
- @else {
+	} @else {
 		font-size: 14px;
 		line-height: 21px;
 	}
@@ -57,9 +52,7 @@ $svg-color-active: #f7a121;
 	@if $device == desktop {
 		font-size: 16px;
 		line-height: 24px;
-	}
-
- @else {
+	} @else {
 		font-size: 14px;
 		line-height: 21px;
 	}
