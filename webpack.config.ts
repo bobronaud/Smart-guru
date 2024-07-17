@@ -1,9 +1,9 @@
+import path from 'path';
+import type { Configuration as DevServerConfiguration } from 'webpack-dev-server';
+import type { Configuration } from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import path from 'path';
-import type { Configuration } from 'webpack';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
-import type { Configuration as DevServerConfiguration } from 'webpack-dev-server';
 
 type Mode = 'production' | 'development';
 
@@ -18,22 +18,11 @@ export default (env: EnvVariables) => {
 	const devServer: DevServerConfiguration = {
 		port: env.port ?? 3000,
 		open: true,
-		hot: true,
-		historyApiFallback: true,
-	};
-
-	const cssLoaderWithModules = {
-		loader: 'css-loader',
-		options: {
-			modules: {
-				localIdentName: isDev ? '[path][name]__[local]' : '[hash:base64:8]',
-			},
-		},
 	};
 
 	const config: Configuration = {
 		mode: env.mode,
-		entry: path.resolve(__dirname, 'src', 'index.ts'),
+		entry: path.resolve(__dirname, 'src', 'index.tsx'),
 		output: {
 			path: path.resolve(__dirname, 'build'),
 			filename: '[name].[contenthash].js',
@@ -47,9 +36,7 @@ export default (env: EnvVariables) => {
 				filename: 'css/[name].[contenthash].css',
 				chunkFilename: 'css/[name].[contenthash].css',
 			}),
-			new BundleAnalyzerPlugin({
-				openAnalyzer: false,
-			}),
+			new BundleAnalyzerPlugin(),
 		],
 		module: {
 			rules: [
@@ -58,33 +45,9 @@ export default (env: EnvVariables) => {
 					use: 'ts-loader',
 					exclude: /node_modules/,
 				},
-				//новые настройки начало
 				{
-					test: /\.module\.s[ac]ss$/,
-					use: [isDev ? 'style-loader' : MiniCssExtractPlugin.loader, cssLoaderWithModules, 'sass-loader'],
-				},
-				{
-					test: /\.s[ac]ss$/,
-					exclude: /\.module\.s[ac]ss$/,
-					use: [isDev ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-				},
-				{
-					test: /\.module\.css$/,
-					use: [isDev ? 'style-loader' : MiniCssExtractPlugin.loader, cssLoaderWithModules],
-				},
-				{
-					test: /\.css$/,
-					exclude: /\.module\.css$/,
-					use: [isDev ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader'],
-				},
-				//новые настройки конец
-				{
-					test: /\.(png|jpg|jpeg|gif)$/i,
-					type: 'asset/resource',
-				},
-				{
-					test: /\.svg$/i,
-					use: [{ loader: '@svgr/webpack', options: { icon: true } }],
+					test: /\.s?css$/,
+					use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
 				},
 			],
 		},

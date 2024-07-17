@@ -1,2 +1,2 @@
-npm run lint
-npm run lint-css
+make lint
+make lint-css
