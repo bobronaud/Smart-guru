@@ -1,0 +1,75 @@
+// скрываем стандартный чекбокс
+.visually_hidden {
+	position: absolute;
+
+	overflow: hidden;
+
+	width: 1px;
+	height: 1px;
+
+	white-space: nowrap;
+
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+}
+
+.switch_container {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+// наш контейнер относительно которого будем позиционировать слайдер
+.switch {
+	position: relative;
+	min-width: 60px;
+	height: 34px;
+}
+
+.switch_label {
+	font-size: 16px;
+}
+
+// основное тело слайдера
+.slider {
+	cursor: pointer;
+
+	position: absolute;
+	inset: 0;
+
+	background-color: #ccc;
+	border-radius: 50px;
+
+	transition: 0.4s;
+}
+
+// сам ползунок
+.slider::before {
+	content: '';
+
+	position: absolute;
+	bottom: 4px;
+	left: 4px;
+
+	width: 26px;
+	height: 26px;
+
+	background-color: white;
+	border-radius: 50px;
+
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: #f7a121;
+}
+
+input:checked + .slider::before {
+	transform: translateX(26px);
+}
+
+@media (width < 1024px) {
+	.switch_label {
+		font-size: 14px;
+	}
+}
