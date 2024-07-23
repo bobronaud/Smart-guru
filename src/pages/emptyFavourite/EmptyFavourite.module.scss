@@ -1,0 +1,61 @@
+@import '../../assets/styles/variables';
+
+.container {
+	padding-top: 76px;
+	padding-left: 300px;
+}
+
+.main-part {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: center;
+	justify-content: center;
+
+	height: calc(100vh - 76px);
+}
+
+.big-man {
+	width: 438px;
+	height: 473px;
+}
+
+.text-line {
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 26.4px;
+}
+
+.backBtn {
+	width: 438.3px;
+}
+
+@media (width <= 1000px) {
+	.container {
+		padding: 0;
+	}
+
+	.main-part {
+		height: 100vh;
+	}
+
+	.backBtn {
+		width: 305px;
+	}
+
+	.big-man {
+		width: 305px;
+		height: 329px;
+	}
+
+	.text-line {
+		font-size: 20px;
+		line-height: 22px;
+	}
+}
+
+@media (width <= 520px) {
+	.backBtn {
+		width: 320px;
+	}
+}

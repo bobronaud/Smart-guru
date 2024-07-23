@@ -21,9 +21,7 @@ const cardData: CardData = {
 const App = () => {
 	return (
 		<div>
-			<h1>Smart-guru describers: {count}</h1>
-			<Button onClick={handleclick}>Describe</Button>
-			<Button onClick={handleclick}>Describe</Button>
+			<CardCourse data={cardData} />
 		</div>
 	);
 };

@@ -3,6 +3,7 @@ import App from './App';
 import MyCertificates from './pages/myCertificates/MyCertificates';
 import UiKit from './pages/uiKit/UiKit';
 import routes from './routes';
+import EmptyFavorite from './pages/emptyFavourite/EmptyFavourite';
 
 const AppRoutes = () => {
 	return (
@@ -18,6 +19,10 @@ const AppRoutes = () => {
 			<Route
 				path={routes.myCertificates()}
 				element={<MyCertificates />}
+			/>
+			<Route
+				path={routes.emptyFavourite()}
+				element={<EmptyFavorite />}
 			/>
 		</Routes>
 	);

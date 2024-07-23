@@ -1,13 +1,18 @@
 $button-size: 54px;
 $casual-border: 1px solid #ededed;
 $background-basic: #fff;
+$background-active: #f7a121;
 $basic-height: 56px;
 
 .topBar {
+	position: fixed;
+	top: 0;
+	left: 300px;
+
 	display: flex;
 	justify-content: flex-end;
 
-	width: 100%;
+	width: calc(100% - 301px);
 	max-width: 100%;
 	height: 76px;
 	padding: 10px 26px 10px 30px;
@@ -38,6 +43,17 @@ $basic-height: 56px;
 
 				&:hover {
 					cursor: pointer;
+				}
+
+				&.active {
+					background-color: $background-active;
+					border-color: $background-active;
+
+					svg {
+						path {
+							stroke: #fff;
+						}
+					}
 				}
 			}
 		}
@@ -82,10 +98,21 @@ $basic-height: 56px;
 	}
 }
 
+@media (width <= 1440px) {
+	.topBar {
+		left: 238px;
+		width: calc(100% - 238px);
+	}
+}
+
 @media (width <= 1000px) {
 	.topBar {
+		left: 0;
+
 		align-items: flex-start;
 		justify-content: space-between;
+
+		width: 100%;
 		height: 74px;
 		padding: 0 0 10px;
 

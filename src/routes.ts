@@ -5,4 +5,5 @@ export default {
 	records: () => '/records',
 	reviews: () => '/reviews',
 	settings: () => '/settings',
+	emptyFavourite: () => '/empty-favourite',
 };
