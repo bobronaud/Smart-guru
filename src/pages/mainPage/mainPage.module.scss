@@ -1,0 +1,27 @@
+.main_container {
+	padding-inline-start: 30px;
+	padding-inline-end: 30px;
+}
+
+.card_container {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	margin-block-end: 20px;
+}
+
+@media (width <=1440px) {
+	.main_container {
+		padding-inline-start: 20px;
+		padding-inline-end: 20px;
+	}
+}
+
+@media (width <= 1000px) {
+	.card_container {
+		margin-block-end: 100px;
+	}
+}

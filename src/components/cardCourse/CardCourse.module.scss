@@ -80,6 +80,7 @@ $svg-color-active: #f7a121;
 .container {
 	display: flex;
 	flex-direction: column;
+	flex: 1 1 30%;
 	gap: 20px;
 
 	width: 100%;
@@ -181,7 +182,7 @@ $svg-color-active: #f7a121;
 
 @media (width <= 1440px) {
 	.container {
-		max-width: 376px;
+		flex: 1 1;
 	}
 
 	.header {
@@ -226,10 +227,17 @@ $svg-color-active: #f7a121;
 	}
 }
 
-@media (width <= 360px) {
+@media (width <= 733px) and (width >= 641px) {
 	.container {
-		max-width: 320px;
+		// max-width: 337px;
+		max-width: 48.3%;
 	}
+}
+
+@media (width <= 360px) {
+	// .container {
+	// 	max-width: 320px;
+	// }
 
 	.header {
 		@include font-header(mobile);
