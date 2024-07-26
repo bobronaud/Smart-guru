@@ -1,26 +1,26 @@
-import TopBar from '@/components/header/TopBar/TopBar';
-
 import CardCourse from '@/components/cardCourse/CardCourse';
-import Navbar from '@/components/navbar/Navbar';
+import { PageLayout } from '@/components/pageLayout/PageLayout';
 import { FiltersMenu } from '@/components/ui/filters/FiltersMenu';
+import { FC } from 'react';
 import styles from './mainPage.module.scss';
 import { cardData } from './mainPageCardData';
 
-export const MainPage = () => {
+export const MainPage: FC = () => {
 	return (
-		<div className={styles.settings_container}>
-			<Navbar></Navbar>
-			<div className={styles.settings_content}>
-				<TopBar></TopBar>
-				<div className={styles.main_container}>
-					<FiltersMenu></FiltersMenu>
-					<div className={styles.card_container}>
-						{cardData.map((card) => {
-							return <CardCourse data={card}></CardCourse>;
-						})}
-					</div>
+		<PageLayout>
+			<div className={styles.main_container}>
+				<FiltersMenu />
+				<div className={styles.card_container}>
+					{cardData.map((card) => {
+						return (
+							<CardCourse
+								data={card}
+								key={1}
+							></CardCourse>
+						);
+					})}
 				</div>
 			</div>
-		</div>
+		</PageLayout>
 	);
 };

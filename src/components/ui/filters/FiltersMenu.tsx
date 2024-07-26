@@ -130,7 +130,7 @@ export const FiltersMenu = () => {
 	useEffect(() => {
 		// если размер окна меньше 1023px то true и будет рендериться кнопка фильтра
 		const handleScreenSize = () => {
-			setScreenSize(window.innerWidth <= 1023);
+			setScreenSize(window.innerWidth <= 1280);
 		};
 		// вызываем функцию для установки начального значения isScreenSize при первоначальном рендере компонента
 		handleScreenSize();

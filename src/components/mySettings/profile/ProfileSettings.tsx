@@ -11,7 +11,7 @@ interface MySettingsProps {
 export const ProfileSettings: FC<MySettingsProps> = ({ imageSrc, login, email, password }) => {
 	return (
 		<div className={styles.profile_settings}>
-			<div>
+			<div className={styles.avatar_container}>
 				<img
 					className={styles.user_avatar}
 					src={imageSrc}

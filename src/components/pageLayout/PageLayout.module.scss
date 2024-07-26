@@ -1,26 +1,26 @@
-.settings_container {
+.page_container {
 	display: flex;
 	justify-content: flex-end;
 }
 
-.settings_content {
+.page_content {
 	width: calc(100% - 300px);
 }
 
 @media (width <=1440px) and (width>=1001px) {
-	.settings_content {
+	.page_content {
 		width: calc(100% - 237px);
 	}
 }
 
 @media (width <= 1000px) {
-	.settings_content {
+	.page_content {
 		width: 100%;
 	}
 }
 
 @media (width <= 600px) {
-	.settings_content {
+	.page_content {
 		width: 100%;
 	}
 }

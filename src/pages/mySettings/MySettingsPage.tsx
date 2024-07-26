@@ -1,16 +1,11 @@
-import TopBar from '@/components/header/TopBar/TopBar';
 import { MySettingsComponent } from '@/components/mySettings/MySettings';
-import Navbar from '@/components/navbar/Navbar';
-import styles from './MySettings.module.scss';
+import { PageLayout } from '@/components/pageLayout/PageLayout';
+import { FC } from 'react';
 
-export const MySettings = () => {
+export const MySettings: FC = () => {
 	return (
-		<div className={styles.settings_container}>
-			<Navbar></Navbar>
-			<div className={styles.settings_content}>
-				<TopBar></TopBar>
-				<MySettingsComponent />
-			</div>
-		</div>
+		<PageLayout>
+			<MySettingsComponent />
+		</PageLayout>
 	);
 };
