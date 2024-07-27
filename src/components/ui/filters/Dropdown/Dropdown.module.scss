@@ -1,0 +1,135 @@
+@import '../../../../assets/styles/variables';
+
+.dropdown_container {
+	cursor: pointer;
+
+	position: relative;
+
+	height: 45px;
+
+	color: #292929;
+	text-align: left;
+	max-width: 298px;
+	flex: 1 1;
+}
+
+.label_container {
+	display: flex;
+	align-items: center;
+
+	height: 100%;
+	padding: 0 10px 0 15px;
+
+	font-size: inherit;
+
+	border-top: 2px solid #ededed;
+	border-right: 2px solid #ededed;
+	border-bottom: 2px solid #ededed;
+	border-left: 2px solid #ededed;
+	border-radius: 4px;
+}
+
+.label_container.open {
+	border-top: 2px solid #f7a121;
+	border-right: 2px solid #f7a121;
+	border-bottom: 2px solid rgb(255 255 255 / 0%);
+	border-left: 2px solid #f7a121;
+	border-radius: 4px 4px 0 0;
+}
+
+.arrow_button {
+	cursor: pointer;
+	width: 12px;
+	height: 6px;
+	transition:
+		transform 0.2s ease-in-out,
+		margin-top 0.2s ease-in-out;
+}
+
+.arrow_button.open {
+	transform: rotate(180deg);
+}
+
+.divelement {
+	width: 100%;
+}
+
+.dropdown_container.open {
+	max-height: auto;
+}
+
+.dropdown_label {
+	cursor: pointer;
+	display: block;
+	width: 100%;
+}
+
+.dropdown_options {
+	cursor: pointer;
+
+	position: absolute;
+
+	display: none;
+
+	width: 100%;
+	max-height: 548px;
+	padding: 10px 10px 10px 15px;
+}
+
+.dropdown_options.open {
+	z-index: 1000;
+	top: 95%;
+
+	display: block;
+	background-color: white;
+
+	border-right: 2px solid #f7a121;
+	border-bottom: 2px solid #f7a121;
+	border-left: 2px solid #f7a121;
+	border-radius: 0 0 4px 4px;
+}
+
+.dropdown_option {
+	cursor: pointer;
+
+	width: 100%;
+	padding: 10px 0 10px 10px;
+
+	list-style-type: none;
+
+	border-radius: 4px;
+}
+
+.dropdown_option:hover {
+	background-color: #f0f0f0;
+}
+
+.dropdown_option:active {
+	background-color: #f0f0f0;
+}
+
+.line_container::before {
+	content: '';
+
+	display: block;
+
+	width: 100%;
+	height: 2px;
+	margin-bottom: 10px;
+
+	background-color: #f0f0f0;
+}
+
+// @media (width >= 1024px) and (width <= 1439px) {
+// 	.dropdown_container {
+// 		min-width: 208px;
+// 		font-size: 16px;
+// 	}
+// }
+
+// @media (min-width: $breakpoint-lg-down) {
+// 	.dropdown_container {
+// 		min-width: 298px;
+// 		font-size: 18px;
+// 	}
+// }

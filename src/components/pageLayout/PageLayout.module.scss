@@ -1,0 +1,26 @@
+.page_container {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.page_content {
+	width: calc(100% - 300px);
+}
+
+@media (width <=1440px) and (width>=1001px) {
+	.page_content {
+		width: calc(100% - 237px);
+	}
+}
+
+@media (width <= 1000px) {
+	.page_content {
+		width: 100%;
+	}
+}
+
+@media (width <= 600px) {
+	.page_content {
+		width: 100%;
+	}
+}

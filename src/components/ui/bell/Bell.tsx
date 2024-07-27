@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
 import classes from './Bell.module.scss';
-import { useState } from 'react';
 const Bell: React.FC = () => {
 	const [dot, setDot] = useState(true);
 	const handleclick2 = () => {
