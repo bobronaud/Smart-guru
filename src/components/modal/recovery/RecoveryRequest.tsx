@@ -1,7 +1,7 @@
 import CloseSVG from '@/assets/icons/close.svg';
 import Button from '@/components/ui/button/Button';
 import { useAppDispatch } from '@/store';
-import { closeModal, openModal } from '@/store/slices/modalSlice';
+import { closeModal, openModal } from '@/store/modal/modalSlice';
 import { useFormik } from 'formik';
 import styles from './Recovery.module.scss';
 

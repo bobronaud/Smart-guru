@@ -3,7 +3,7 @@ import imgRoleOrganization from '@/assets/images/roleOrganization.png';
 import imgRoleUser from '@/assets/images/roleUser.png';
 import Button from '@/components/ui/button/Button';
 import { useAppDispatch } from '@/store';
-import { closeModal } from '@/store/slices/modalSlice';
+import { closeModal } from '@/store/modal/modalSlice';
 import styles from './Role.module.scss';
 
 const Role = () => {

@@ -1,6 +1,6 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
-import modalSlice from './slices/modalSlice';
+import modalSlice from './modal/modalSlice';
 
 const rootReducer = combineReducers({
 	modal: modalSlice,

@@ -3,7 +3,7 @@ import PasswordInput from '@/components/forms/passwordInput/PasswordInput';
 import Button from '@/components/ui/button/Button';
 import Checkbox from '@/components/ui/checkbox/Checkbox';
 import { useAppDispatch } from '@/store';
-import { closeModal, openModal } from '@/store/slices/modalSlice';
+import { closeModal, openModal } from '@/store/modal/modalSlice';
 import { useFormik } from 'formik';
 import styles from './LogIn.module.scss';
 

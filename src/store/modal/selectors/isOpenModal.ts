@@ -1,4 +1,4 @@
-import { RootState } from '..';
+import { RootState } from '../..';
 
 const isOpenModal = (state: RootState) => state.modal.isOpen;
 

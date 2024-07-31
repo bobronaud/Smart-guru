@@ -1,7 +1,7 @@
 import { useAppDispatch, useAppSelector } from '@/store';
-import getModlaType from '@/store/selectors/getModalType';
-import isOpenModal from '@/store/selectors/isOpenModal';
-import { closeModal } from '@/store/slices/modalSlice';
+import { closeModal } from '@/store/modal/modalSlice';
+import getModlaType from '@/store/modal/selectors/getModalType';
+import isOpenModal from '@/store/modal/selectors/isOpenModal';
 import { ModalType } from '@/types/modal';
 import { useEffect } from 'react';
 import styles from './Modal.module.scss';

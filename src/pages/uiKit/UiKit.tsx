@@ -1,9 +1,9 @@
 import Clock from '@/assets/icons/clock.svg';
 import Button from '@/components/ui/button/Button';
-import { useAppDispatch } from '@/store';
-import { openModal } from '@/store/slices/modalSlice';
 import { FiltersMenu } from '@/components/ui/filters/FiltersMenu';
 import Place from '@/components/ui/place/Place';
+import { useAppDispatch } from '@/store';
+import { openModal } from '@/store/modal/modalSlice';
 import styles from './UiKit.module.scss';
 
 const UiKit = () => {

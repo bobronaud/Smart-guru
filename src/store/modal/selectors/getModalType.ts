@@ -1,4 +1,4 @@
-import { RootState } from '..';
+import { RootState } from '../..';
 
 const getModlaType = (state: RootState) => state.modal.type;
 
