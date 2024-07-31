@@ -2,7 +2,7 @@ import CloseSVG from '@/assets/icons/close.svg';
 import imgRoleOrganization from '@/assets/images/roleOrganization.png';
 import imgRoleUser from '@/assets/images/roleUser.png';
 import Button from '@/components/ui/button/Button';
-import { useAppDispatch } from '@/hooks';
+import { useAppDispatch } from '@/store';
 import { closeModal } from '@/store/slices/modalSlice';
 import styles from './Role.module.scss';
 

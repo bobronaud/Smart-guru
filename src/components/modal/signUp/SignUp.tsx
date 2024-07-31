@@ -1,7 +1,7 @@
 import CloseSVG from '@/assets/icons/close.svg';
 import PasswordInput from '@/components/forms/passwordInput/PasswordInput';
 import Button from '@/components/ui/button/Button';
-import { useAppDispatch } from '@/hooks';
+import { useAppDispatch } from '@/store';
 import { closeModal } from '@/store/slices/modalSlice';
 import { useFormik } from 'formik';
 import styles from './SignUp.module.scss';

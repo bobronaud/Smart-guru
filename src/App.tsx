@@ -1,5 +1,5 @@
 import Button from './components/ui/button/Button';
-import { useAppDispatch } from './hooks';
+import { useAppDispatch } from './store';
 import { openModal } from './store/slices/modalSlice';
 
 const App = () => {

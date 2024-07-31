@@ -1,6 +1,6 @@
 import Clock from '@/assets/icons/clock.svg';
 import Button from '@/components/ui/button/Button';
-import { useAppDispatch } from '@/hooks';
+import { useAppDispatch } from '@/store';
 import { openModal } from '@/store/slices/modalSlice';
 import { FiltersMenu } from '@/components/ui/filters/FiltersMenu';
 import Place from '@/components/ui/place/Place';

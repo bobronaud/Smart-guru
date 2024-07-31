@@ -1,4 +1,4 @@
-import { useAppDispatch, useAppSelector } from '@/hooks';
+import { useAppDispatch, useAppSelector } from '@/store';
 import getModlaType from '@/store/selectors/getModalType';
 import isOpenModal from '@/store/selectors/isOpenModal';
 import { closeModal } from '@/store/slices/modalSlice';
