@@ -1,4 +1,5 @@
-import { FC } from 'react';
+import SideBar from '@/components/sidebar/SideBar';
+import { FC, useState } from 'react';
 import styles from './ProfileSettings.module.scss';
 
 interface MySettingsProps {
@@ -9,8 +10,10 @@ interface MySettingsProps {
 }
 
 export const ProfileSettings: FC<MySettingsProps> = ({ imageSrc, login, email, password }) => {
+	const [isOpen,setOpen] = useState(false)
 	return (
 		<div className={styles.profile_settings}>
+			<SideBar isEditProfile isOpen={isOpen} setOpen={setOpen} data={{photo:imageSrc,login:login,email:email,password:password}} />
 			<div className={styles.avatar_container}>
 				<img
 					className={styles.user_avatar}
@@ -32,7 +35,7 @@ export const ProfileSettings: FC<MySettingsProps> = ({ imageSrc, login, email, p
 					<h2 className={styles.text_content_title}>Пароль</h2>
 					<p className={styles.text_container}>{password}</p>
 				</div>
-				<button className={styles.profile_button}>Сменить пароль</button>
+				<button onClick={()=>setOpen(true)} className={styles.profile_button}>Сменить пароль</button>
 				<button className={styles.profile_button}>Удалить аккаунт</button>
 			</div>
 		</div>

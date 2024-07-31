@@ -1,0 +1,12 @@
+@import '@/assets/styles/variables';
+.text-field{
+    background:url("../../../../assets/icons/bellicon.svg");
+    padding-left:30px;
+    font-weight: 300;
+    font-size: inherit;
+    margin-bottom: 20px;
+    &:focus { 
+        outline-width: 5px;
+        outline-color:$primary-border-color-hover;
+    }
+}
