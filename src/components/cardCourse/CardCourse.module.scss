@@ -5,14 +5,17 @@ $svg-color-active: #f7a121;
 
 @mixin font-header($device) {
 	font-weight: 700;
+
 	@if $device == desktop {
 		font-size: 20px;
 		line-height: 26px;
 	}
+
 	@if $device == tablet {
 		font-size: 18px;
 		line-height: 23.4px;
 	}
+
 	@if $device == mobile {
 		font-size: 16px;
 		line-height: 19.2px;
@@ -33,6 +36,7 @@ $svg-color-active: #f7a121;
 
 @mixin font-subtitle-direction($device) {
 	font-weight: 400;
+
 	@if $device == desktop {
 		font-size: 16px;
 		line-height: 24px;
@@ -44,6 +48,7 @@ $svg-color-active: #f7a121;
 
 @mixin font-description($device) {
 	font-weight: 400;
+
 	@if $device == desktop {
 		font-size: 16px;
 		line-height: 24px;
@@ -55,14 +60,17 @@ $svg-color-active: #f7a121;
 
 @mixin font-info($device) {
 	font-weight: 400;
+
 	@if $device == desktop {
 		font-size: 18px;
 		line-height: 23.4px;
 	}
+
 	@if $device == tablet {
 		font-size: 16px;
 		line-height: 24px;
 	}
+
 	@if $device == mobile {
 		font-size: 14px;
 		line-height: 18.2px;
@@ -72,6 +80,7 @@ $svg-color-active: #f7a121;
 .container {
 	display: flex;
 	flex-direction: column;
+	flex: 1 1 30%;
 	gap: 20px;
 
 	width: 100%;
@@ -173,7 +182,7 @@ $svg-color-active: #f7a121;
 
 @media (width <= 1440px) {
 	.container {
-		max-width: 376px;
+		flex: 1 1;
 	}
 
 	.header {
@@ -218,10 +227,17 @@ $svg-color-active: #f7a121;
 	}
 }
 
-@media (width <= 360px) {
+@media (width <= 733px) and (width >= 641px) {
 	.container {
-		max-width: 320px;
+		// max-width: 337px;
+		max-width: 48.3%;
 	}
+}
+
+@media (width <= 360px) {
+	// .container {
+	// 	max-width: 320px;
+	// }
 
 	.header {
 		@include font-header(mobile);
