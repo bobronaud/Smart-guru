@@ -1,20 +1,17 @@
-import Navbar from '@/components/navbar/Navbar';
 import Button from '@/components/ui/button/Button';
 import HugemanSVG from '@/assets/icons/hugeman.svg';
 import classNames from 'classnames/bind';
 import styles from './EmptyFavourite.module.scss';
-import TopBar from '@/components/header/TopBar/TopBar';
 import { Link } from 'react-router-dom';
 import routes from '@/routes';
+import { PageLayout } from '@/components/pageLayout/PageLayout';
 
 const cx = classNames.bind(styles);
 
 const EmptyFavorite = () => {
 	return (
-		<div className={cx('container')}>
-			<Navbar />
-			<TopBar />
-			<div className={cx('main-part')}>
+		<PageLayout>
+			<div className={cx('main-container')}>
 				<HugemanSVG className={cx('big-man')} />
 				<h3 className={cx('text-line')}>Пока здесь ничего нет</h3>
 				<Link to={routes.catalog()}>
@@ -23,7 +20,7 @@ const EmptyFavorite = () => {
 					</div>
 				</Link>
 			</div>
-		</div>
+		</PageLayout>
 	);
 };
 

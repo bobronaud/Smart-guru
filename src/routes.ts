@@ -6,4 +6,5 @@ export default {
 	reviews: () => '/reviews',
 	settings: () => '/settings',
 	emptyFavourite: () => '/empty-favourite',
+	notFound: () => '/not-found',
 };
