@@ -1,0 +1,9 @@
+@import '@/assets/styles/variables';
+.review{
+    font-weight: 300;
+    font-size: inherit;
+    &:focus { 
+        outline-width: 5px;
+        outline-color:$primary-border-color-hover;
+    }
+}

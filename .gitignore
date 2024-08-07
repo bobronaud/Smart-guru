@@ -41,3 +41,7 @@ lerna-debug.log*
 
 # npm
 package-lock.json
+src/components/mySettings/profile/ProfileSettings.tsx
+src/components/mySettings/profile/ProfileSettings.tsx
+src/components/mySettings/profile/ProfileSettings.tsx
+/src/components/mySettings
