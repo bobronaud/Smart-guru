@@ -1,0 +1,50 @@
+@import '../../assets/styles/variables';
+
+.main-container {
+	display: flex;
+	flex-direction: column;
+    gap: 20px;
+    align-items: center;
+	justify-content: center;
+
+    height: calc(100vh - 86px);
+}
+
+.big-man {
+    width: 483.3px;
+	height: 473.5px;
+}
+
+.backBtn {
+	width: 483.3px;
+}
+
+.text-line {
+	font-size: 24px;
+}
+
+@media (width <= 1000px) {
+	.main-container {
+		height: calc(100vh - 177px);
+		margin-bottom: 93px;
+	}
+
+	.big-man {
+        width: 305px;
+		height: 329px;
+	}
+
+	.backBtn {
+		width: 305px;
+	}
+
+	.text-line {
+		font-size: 20px;
+	}
+}
+
+@media (width <= 600) {
+	.main-container {
+		height: calc(100vh - 172px);
+	}
+}

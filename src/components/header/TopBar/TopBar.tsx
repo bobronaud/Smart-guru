@@ -4,8 +4,12 @@ import SmallLogoSVG from '@/assets/icons/smalllogo.svg';
 import Bell from '@/components/ui/bell/Bell';
 import useWindowWidth from '@/hooks/useWindowWidth';
 import classes from './TopBar.module.scss';
+import { Link, useLocation } from 'react-router-dom';
+import routes from '@/routes';
 
 const TopBar = () => {
+	const location = useLocation();
+	const isFavourite = location.pathname === '/empty-favourite';
 	const dispWidth = useWindowWidth();
 	const bigWidth = dispWidth <= 1000 && dispWidth > 600;
 	const smallWidth = dispWidth <= 600;
@@ -16,9 +20,11 @@ const TopBar = () => {
 			{smallWidth && <SmallLogoSVG className={classes.smallLogo} />}
 			<div className={classes.box}>
 				<div className={classes.btnBox}>
-					<button className={classes.favBtn}>
-						<HeartSVG />
-					</button>
+					<Link to={routes.emptyFavourite()}>
+						<button className={`${classes.favBtn} ${isFavourite && classes.active}`}>
+							<HeartSVG />
+						</button>
+					</Link>
 					<Bell />
 				</div>
 				<div className={classes.profBox}>
