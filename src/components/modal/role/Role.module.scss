@@ -1,0 +1,100 @@
+$color-black: #292929;
+$color-white: #fff;
+$color-grey: #9ea5ad;
+$color-lightgrey: #ededed;
+$color-orange: #f7a121;
+
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	align-items: center;
+	justify-content: center;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+
+	.title {
+		font-size: 32px;
+		font-weight: 800;
+		line-height: 41.6px;
+		color: $color-black;
+	}
+
+	svg {
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+.roles {
+	display: flex;
+	gap: 30px;
+}
+
+.role {
+	cursor: pointer;
+
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	padding: 30px;
+
+	border: 1px solid $color-lightgrey;
+	border-radius: 10px;
+
+	& .title {
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 26px;
+	}
+
+	& img {
+		width: 100%;
+		height: auto;
+	}
+
+	&:hover {
+		border-color: $color-orange;
+	}
+}
+
+.button {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+@media (width <= 1000px) {
+	.container,
+	.roles {
+		gap: 20px;
+	}
+
+	.role {
+		padding: 20px;
+	}
+
+	.header .title {
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 26.4px;
+	}
+
+	.role .title {
+		font-size: 18px;
+		line-height: 23.4px;
+	}
+}
+
+@media (width <= 585px) {
+	.roles {
+		flex-direction: column;
+	}
+}

@@ -1,9 +1,19 @@
+import Button from './components/ui/button/Button';
+import { useAppDispatch } from './store';
+import { openModal } from './store/modal/modalSlice';
+
 const App = () => {
+	const dispatch = useAppDispatch();
+	const handleclick = () => {
+		dispatch(openModal('role'));
+	};
+	const handleclick2 = () => {
+		dispatch(openModal('logIn'));
+	};
 	return (
 		<div>
-			{/* <h1>Smart-guru describers: {count}</h1>
-			<Button onClick={handleclick}>Describe</Button>
-			<Button onClick={handleclick}>Describe</Button> */}
+			<Button onClick={handleclick}>open modal</Button>
+			<Button onClick={handleclick2}>open modal</Button>
 		</div>
 	);
 };

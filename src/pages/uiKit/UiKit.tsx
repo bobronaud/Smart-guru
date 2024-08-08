@@ -2,9 +2,13 @@ import Clock from '@/assets/icons/clock.svg';
 import Button from '@/components/ui/button/Button';
 import { FiltersMenu } from '@/components/ui/filters/FiltersMenu';
 import Place from '@/components/ui/place/Place';
+import { useAppDispatch } from '@/store';
+import { openModal } from '@/store/modal/modalSlice';
 import styles from './UiKit.module.scss';
 
 const UiKit = () => {
+	const dispatch = useAppDispatch();
+
 	return (
 		<div className={styles.container}>
 			<div /*Div с кнопками. Для удобства можно свернуть*/>
@@ -110,6 +114,22 @@ const UiKit = () => {
 					<Place type={'inProgress'} />
 					<Place type={'almostFinished'} />
 					<Place type={'finished'} />
+				</div>
+			</div>
+			<hr />
+			<div /*Div с модалками */>
+				<div className={styles.block}>
+					<Button onClick={() => dispatch(openModal('role'))}>Выбрать роль</Button>
+					<Button onClick={() => dispatch(openModal('logIn'))}>Войти</Button>
+					<Button onClick={() => dispatch(openModal('signUp'))}>Регистрация</Button>
+					<Button>Восстановить пароль</Button>
+				</div>
+				<div className={styles.block}>
+					<Button>Изменить пароль</Button>
+					<Button>Удалить отзыв</Button>
+					<Button>Запись создана</Button>
+					<Button>Сертификат</Button>
+					<Button>Фильтры</Button>
 				</div>
 			</div>
 			<hr />

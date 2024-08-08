@@ -1,0 +1,75 @@
+$color-white: #fff;
+$color-lightgray: #ededed;
+$color-orange: #f7a121;
+
+.defaultCheckbox {
+	display: none;
+}
+
+/* Стили для контейнера */
+.customCheckbox {
+	cursor: pointer;
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+}
+
+/* Создаем кастомный чекбокс */
+.checkmark {
+	position: absolute;
+
+	width: 24px;
+	height: 24px;
+
+	background-color: $color-white;
+	border: 2px solid $color-lightgray;
+	border-radius: 3px;
+
+	&:hover {
+		border-color: $color-orange;
+	}
+}
+
+/* Стили для галочки внутри кастомного чекбокса */
+.customCheckbox .checkmark::after {
+	content: '';
+
+	position: absolute;
+	top: 3px;
+	left: 7px;
+	transform: rotate(45deg);
+
+	display: none;
+
+	width: 7px;
+	height: 12px;
+
+	border: 2px solid white;
+	border-width: 0 3px 3px 0;
+}
+
+/* Стили для активного состояния чекбокса */
+.customCheckbox input:checked ~ .checkmark {
+	background-color: $color-orange;
+	border: 2px solid $color-orange;
+
+	/* Отображение галочки при чекнутом состоянии */
+	&::after {
+		display: block;
+	}
+}
+
+@media (width <= 1000px) {
+	.customCheckbox,
+	.checkmark {
+		width: 20px;
+		height: 20px;
+	}
+
+	.customCheckbox .checkmark::after {
+		top: 2px;
+		left: 6px;
+		width: 6px;
+		height: 10px;
+	}
+}

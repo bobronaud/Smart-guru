@@ -1,0 +1,39 @@
+$color-black: #292929;
+$color-white: #fff;
+$color-grey: #9ea5ad;
+$color-lightgrey: #ededed;
+$color-orange: #f7a121;
+
+.bg {
+	position: fixed;
+	inset: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	opacity: 30;
+	background-color: #0000004d;
+}
+
+.wrapper {
+	min-width: 600px;
+	max-width: 1200px;
+	padding: 50px;
+
+	background-color: $color-white;
+	border: 1px solid $color-lightgrey;
+	border-radius: 10px;
+}
+
+*:focus {
+	outline: none;
+}
+
+@media (width <= 1000px) {
+	.wrapper {
+		min-width: 90%;
+		max-width: 90%;
+		padding: 30px;
+	}
+}
